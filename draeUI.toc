@@ -1,0 +1,93 @@
+## Interface: 50400
+## Author: Drae
+## Title: draeUI
+## Version: 3.0
+## SavedVariables: draeUIDB
+## SavedVariablesPerCharacter: draeUICharDB
+## OptionalDeps: SharedMedia
+## X-Embeds: LibSharedMedia-3.0
+## X-oUF: draeUF
+
+libs\libs.xml
+media\media.xml
+oUF\oUF.xml
+
+modules\unitframes\elements\classification.lua
+modules\unitframes\elements\extrapower.lua
+modules\unitframes\elements\pvptrinket.lua
+modules\unitframes\elements\runes.lua
+modules\unitframes\elements\smooth.lua
+modules\unitframes\elements\spellrange.lua
+modules\unitframes\elements\sword.lua
+
+init.lua
+
+config\config.defaults.lua
+config\config.mounts.lua
+
+functions\variables.lua
+functions\colours.lua
+functions\fonts.lua
+functions\functions.lua
+functions\maths.lua
+
+# Unitframes
+modules\unitframes\init.lua
+modules\unitframes\core.lua
+modules\unitframes\castbar.lua
+modules\unitframes\events.lua
+modules\unitframes\tags.lua
+
+modules\unitframes\resources\combo.lua
+modules\unitframes\resources\deathknight.lua
+modules\unitframes\resources\druid.lua
+modules\unitframes\resources\mage.lua
+modules\unitframes\resources\monk.lua
+modules\unitframes\resources\paladin.lua
+modules\unitframes\resources\priest.lua
+modules\unitframes\resources\totems.lua
+modules\unitframes\resources\warlock.lua
+
+modules\unitframes\units\player.lua
+modules\unitframes\units\target.lua
+modules\unitframes\units\pet.lua
+modules\unitframes\units\focus.lua
+modules\unitframes\units\targettarget.lua
+modules\unitframes\units\boss.lua
+modules\unitframes\units\arena.lua
+
+# Minimap
+modules\minimap\init.lua
+modules\minimap\minimap.lua
+modules\minimap\buttons.lua
+
+# Nameplates
+modules\nameplates\init.lua
+modules\nameplates\nameplates.lua
+modules\nameplates\auras.lua
+
+# Buffbar
+modules\buffbar\templates.xml
+modules\buffbar\init.lua
+modules\buffbar\buffbar.lua
+
+# Misc
+modules\misc\init.lua
+modules\misc\alreadyknown.lua
+modules\misc\autoinvite.lua
+modules\misc\enhanceraidbrowser.lua
+modules\misc\helmsaver.lua
+modules\misc\infobar.lua
+modules\misc\openall.lua
+modules\misc\randommount.lua
+modules\misc\switchset.lua
+
+# Blizzard
+modules\blizzard\init.lua
+modules\blizzard\alertframe.lua
+modules\blizzard\altpower.lua
+modules\blizzard\colorpicker.lua
+modules\blizzard\durability.lua
+modules\blizzard\gm.lua
+modules\blizzard\vehicle.lua
+modules\blizzard\watchframe.lua

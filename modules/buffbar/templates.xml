@@ -1,0 +1,54 @@
+<Ui xmlns="http://www.blizzard.com/wow/ui/">
+	<Button name="DraeUIBuffButtonTemplate" inherits="SecureActionButtonTemplate" virtual="true">
+		<Size x="30" y="30"/>
+		<Attributes>
+			<Attribute name="type" value="cancelaura"/>
+		</Attributes>
+		<Scripts>
+			<OnLoad>
+				self:RegisterForClicks("RightButtonUp");
+			</OnLoad>
+			<OnEnter>
+				local hilight 	= self.highlight;
+				local auraSize 	= self:GetWidth();
+
+				hilight:SetSize(auraSize * 1.8, auraSize * 1.8);
+				hilight.border:SetSize(auraSize * 1.8 * 1.1, auraSize * 1.8 * 1.1);
+				hilight:SetPoint("TOPLEFT", self, "TOPLEFT", -(auraSize * 1.8 - auraSize) / 2, (auraSize * 1.8 - auraSize) / 2);
+				hilight.icon:SetSize(auraSize * 1.8, auraSize * 1.8);
+				hilight.icon:SetTexture(self.icon.tex:GetTexture());
+				hilight:Show();
+
+				GameTooltip:SetOwner(self, "ANCHOR_BOTTOMLEFT");
+
+				if(self:GetAttribute'index') then
+					GameTooltip:SetUnitAura(SecureButton_GetUnit(self:GetParent()), self:GetID(), self.filter)
+				else
+					GameTooltip:SetInventoryItem("player", self:GetID());
+				end
+
+				local _, _, _, _, _, _, _, caster = UnitAura(SecureButton_GetUnit(self:GetParent()), self:GetID(), self.filter);
+
+				if (caster and UnitExists(caster)) then
+					local c;
+
+					if (UnitIsPlayer(caster)) then
+						if (RAID_CLASS_COLORS[select(2, UnitClass(caster))]) then
+							c = RAID_CLASS_COLORS[select(2, UnitClass(caster))];
+						end
+					else
+						c = FACTION_BAR_COLORS[UnitReaction(caster, "player")];
+					end
+
+					GameTooltip:AddLine(("Cast by |cff%02x%02x%02x%s|r"):format(c.r * 255, c.g * 255, c.b * 255, UnitName(caster)));
+				end
+
+				GameTooltip:Show();
+			</OnEnter>
+			<OnLeave>
+				self.highlight:Hide();
+				GameTooltip:Hide();
+			</OnLeave>
+		</Scripts>
+	</Button>
+</Ui>
