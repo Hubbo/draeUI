@@ -30,6 +30,7 @@ functions\colours.lua
 functions\fonts.lua
 functions\functions.lua
 functions\maths.lua
+functions\console.lua
 
 # Unitframes
 modules\unitframes\init.lua
