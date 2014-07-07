@@ -38,7 +38,10 @@ local ArenaUpdate = function(self, event, unit, eventType)
 
 	local trinket = self.Trinket
 
-	if (event == "ZONE_CHANGED_NEW_AREA") then
+	if (event == "ARENA_OPPONENT_UPDATE" and eventType == "seen" and UnitExists(unit) and UnitIsPlayer(unit)) then
+		print ("SETTING TEXTURE ", unit, UnitFactionGroup(unit))
+		trinket.icon:SetTexture(UnitFactionGroup(unit) == "Horde" and "Interface\\Icons\\INV_Jewelry_TrinketPVP_02" or "Interface\\Icons\\INV_Jewelry_TrinketPVP_01")
+	else
 		local _, instanceType = GetInstanceInfo()
 
 		if (instanceType == "arena") then
@@ -48,8 +51,6 @@ local ArenaUpdate = function(self, event, unit, eventType)
 			self:UnregisterEvent("COMBAT_LOG_EVENT_UNFILTERED", CombatLog)
 			trinket:Hide()
 		end
-	elseif (eventType == "seen" and UnitExists(unit) and UnitIsPlayer(unit)) then
-		trinket.icon:SetTexture(UnitFactionGroup(unit) == "Horde" and "Interface\\Icons\\INV_Jewelry_TrinketPVP_02" or "Interface\\Icons\\INV_Jewelry_TrinketPVP_01")
 	end
 end
 
