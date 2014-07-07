@@ -459,7 +459,7 @@ do
 			if (unit ~= "player" and unit ~= "pet" and unit ~= "vehicle") then
 				if (T.db["frames"].auras.showBuffsOnFriends and button.isFriendly and duration > 0) then
 					return true
-				elseif (T.db["frames"].auras.showBuffsOnEnemies and button.isEnemy and duration > 0) then
+				elseif (T.db["frames"].auras.showBuffsOnEnemies and button.isEnemy and (duration > 0 or isBossDebuff)) then
 					return true
 				end
 			elseif (T.db["frames"].auras.showBuffsOnMe and duration > 0 and duration <= 600) then
