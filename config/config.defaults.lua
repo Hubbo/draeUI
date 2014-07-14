@@ -38,11 +38,10 @@ C["frames"] = {
 
 	-- Player and Target are positioned relative to center of screen,
 	-- all other frames are positioned relative to those
-	playerXoffset		= -300,
-	playerYoffset		= -70,
-	targetXoffset		= 300,
-	targetYoffset		= -70,
-
+	playerXoffset		= -420,
+	playerYoffset		= -140,
+	targetXoffset		= 420,
+	targetYoffset		= -140,
 	totXoffset			= 20, 	-- Relative to right side of target
 	totYoffset			= 0,
 	focusXoffset		= 0,  	-- Relative to left of target
@@ -177,7 +176,7 @@ C["castbar"] = {
 		width	 = 200,
 		height	 = 18,
 		xOffset  = 0,
-		yOffset  = -250,
+		yOffset  = -140,
 		anchor 	 = "UIParent",
 		anchorat = "CENTER",
 		anchorto = "CENTER",
@@ -186,7 +185,7 @@ C["castbar"] = {
 		width	 = 200,
 		height	 = 14,
 		xOffset  = 0,
-		yOffset  = -275,
+		yOffset  = -165,
 		anchor 	 = "UIParent",
 		anchorat = "CENTER",
 		anchorto = "CENTER",
@@ -212,8 +211,8 @@ C["castbar"] = {
 
 -- Secondary resource bar
 C["resourcebar"] = {
-	xOffset  = 30,
-	yOffset  = -55,
+	xOffset  = 0,
+	yOffset  = 20,
 }
 
 -- Equipment set mappings

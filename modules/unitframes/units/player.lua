@@ -93,14 +93,14 @@ local StyleDrae_Player = function(frame, unit, isSingle)
 	-- Class specific resource bars
 	local rbp = T.db["resourcebar"]
 
-	UF.CreateHolyPowerBar(frame, "CENTER", frame, "CENTER", rbp.xOffset, rbp.yOffset)
-	UF.CreateEclipseBar(frame, "CENTER", frame, "CENTER", rbp.xOffset, rbp.yOffset)
-	UF.CreateRuneBar(frame, "CENTER", frame, "CENTER", rbp.xOffset, rbp.yOffset)
-	UF.CreateWarlockBar(frame, "CENTER", frame, "CENTER", rbp.xOffset, rbp.yOffset)
-	UF.CreateComboPointBar(frame, "CENTER", frame, "CENTER", rbp.xOffset, rbp.yOffset)
-	UF.CreateMonkBar(frame, "CENTER", frame, "CENTER", rbp.xOffset, rbp.yOffset)
-	UF.CreatePriestBar(frame, "CENTER", frame, "CENTER", rbp.xOffset, rbp.yOffset)
-	UF.CreateArcaneChargeBar(frame, "CENTER", frame, "CENTER", rbp.xOffset, rbp.yOffset)
+	UF.CreateHolyPowerBar(frame, "CENTER", frame.Castbar, "CENTER", rbp.xOffset, rbp.yOffset)
+	UF.CreateEclipseBar(frame, "CENTER", frame.Castbar, "CENTER", rbp.xOffset, rbp.yOffset)
+	UF.CreateRuneBar(frame, "CENTER", frame.Castbar, "CENTER", rbp.xOffset, rbp.yOffset)
+	UF.CreateWarlockBar(frame, "CENTER", frame.Castbar, "CENTER", rbp.xOffset, rbp.yOffset)
+	UF.CreateComboPointBar(frame, "CENTER", frame.Castbar, "CENTER", rbp.xOffset, rbp.yOffset)
+	UF.CreateMonkBar(frame, "CENTER", frame.Castbar, "CENTER", rbp.xOffset, rbp.yOffset)
+	UF.CreatePriestBar(frame, "CENTER", frame.Castbar, "CENTER", rbp.xOffset, rbp.yOffset)
+	UF.CreateArcaneChargeBar(frame, "CENTER", frame.Castbar, "CENTER", rbp.xOffset, rbp.yOffset)
 
 	-- Various classes now use the totembar
 	UF.CreateTotemBar(frame, "TOPRIGHT", frame, "BOTTOMRIGHT", 0, -20)
