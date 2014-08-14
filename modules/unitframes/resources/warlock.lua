@@ -39,20 +39,10 @@ do
 		rs:EnableMouse(false)
 		rs.unit = "player"
 
-		_G["ShardBarFrame"]:SetParent(rs)
-		_G["ShardBarFrame"]:ClearAllPoints()
-		_G["ShardBarFrame"]:SetPoint(point, anchor, relpoint, xOffset / scale, yOffset / scale)
-		_G["ShardBarFrame"]:SetScale(scale)
-
-		_G["DemonicFuryBarFrame"]:SetParent(rs)
-		_G["DemonicFuryBarFrame"]:ClearAllPoints()
-		_G["DemonicFuryBarFrame"]:SetPoint(point, anchor, relpoint, xOffset / scale, yOffset / scale)
-		_G["DemonicFuryBarFrame"]:SetScale(scale)
-
-		_G["BurningEmbersBarFrame"]:SetParent(rs)
-		_G["BurningEmbersBarFrame"]:ClearAllPoints()
-		_G["BurningEmbersBarFrame"]:SetPoint(point, anchor, relpoint, xOffset / scale, yOffset / scale)
-		_G["BurningEmbersBarFrame"]:SetScale(scale)
+		_G["WarlockPowerFrame"]:SetParent(rs)
+		_G["WarlockPowerFrame"]:ClearAllPoints()
+		_G["WarlockPowerFrame"]:SetPoint(point, anchor, relpoint, xOffset / scale, yOffset / scale)
+		_G["WarlockPowerFrame"]:SetScale(scale)
 
 		rs:SetAlpha(0)
 

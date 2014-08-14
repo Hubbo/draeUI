@@ -211,8 +211,8 @@ C["castbar"] = {
 
 -- Secondary resource bar
 C["resourcebar"] = {
-	xOffset  = 0,
-	yOffset  = 20,
+	xOffset  = -400,
+	yOffset  = -45,
 }
 
 -- Equipment set mappings
